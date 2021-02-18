@@ -1,14 +1,13 @@
-import { useState } from "react";
 import useCounter from "../../hooks/useCounter";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
-
 
 // const [state, dispatch] = useReducer(reducer, initialState);
 
 function BasicCounter() {
- const [count, increment, decrement] = useCounter()
-  useDocumentTitle(count)
-  
+  const [count, increment, decrement] = useCounter();
+
+  useDocumentTitle(count);
+
   return (
     <div>
       <h4>Basic Counter</h4>
