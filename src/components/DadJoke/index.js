@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
+//import useFetch from "../../hooks/useFetch"
+
+const url = "https://icanhazdadjoke.com/";
 
 function DadJoke() {
   const [joke, setJoke] = useState("");
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("https://icanhazdadjoke.com/", {
+    fetch(`${url}`, {
       headers: { Accept: "application/json" },
     })
       .then((res) => res.json())
